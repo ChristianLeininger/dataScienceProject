@@ -15,8 +15,8 @@ data_filled = data.fillna(data.mean())
 features = ['Kaufkraft', 'Bonitaet']
 
 scaler = StandardScaler()
-n = 200
-size = 1000
+n = 1000
+size = 5000
 # import pdb; pdb.set_trace()
 X1 = scaler.fit_transform(data_filled['Kaufkraft'].values.reshape(-1, 1))[:size]
 X2 = scaler.fit_transform(data_filled['Bonitaet'].values.reshape(-1, 1))[:size]
